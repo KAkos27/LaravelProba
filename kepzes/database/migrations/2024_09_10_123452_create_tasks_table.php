@@ -18,6 +18,7 @@ return new class extends Migration
             $table->date('end_date')->default('2024-09-10');
             $table->boolean('status')->default(0);
             $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignId('project_id')->references('id')->on('projects');
             $table->timestamps();
         });
     }
